@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 需要找到第3个li标签 */
+        /* 1---使用nth-child(n) */
+        /* 这样n=3不能选中div---只有n=4才可以 */
+        /* li:nth-child(3) {
+            background-color: #6c99c5;
+        } */
+
+        /* 2---使用nth-of-type  */
+        /* 是可以选中div的---首先满足type为li标签 */
+        li:nth-of-type(3) {
+            background-color: orange;
+        }
+        div:nth-of-type(10) {
+            background-color: #6c99c5;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 结构伪类选择器
+拓展补充： nth-of-type
+选择器： nth-of-type(n){}---只有在父元素的同类型子元素范围中 匹配第n个
+区别：
+ nth-child(n){}---当前元素的父容器的所有孩子中的个数
+ nth-of-type(n){}---先通过该类型找到符合的孩子，然后在这些孩子中的个数 -->
+ <ul>
+    <li>我是第1个li</li>
+    <li>我是第2个li</li>
+    <div>内容</div>
+    <div>内容</div>
+    <div>内容</div>
+    <div>内容</div>
+    <div>内容</div>
+    <div>内容</div>
+    <div>内容</div>
+    <div>内容</div>
+    <div>内容</div>
+    <div>内容</div>
+    <li>我是第3个li</li>
+    <li>我是第4个li</li>
+    <li>我是第5个li</li>
+    <li>我是第6个li</li>
+    <li>我是第7个li</li>
+    <li>我是第8个li</li>
+    <li>我是第9个li</li>
+    <li>我是第10个li</li>
+ </ul>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            color: #6c99c5;
+            font-style: italic;
+            font-weight: 200;/*无效*/
+            font-family: 楷体;
+            font-size: 400;/*无效*/
+        }/*a标签会继承父元素的color属性---但是会被浏览器默认的蓝色覆盖掉---优先显示浏览器默认的效果*/
+    </style>
+</head>
+<body>
+    <!-- 继承失效的特殊情况 -->
+    <!-- 如果元素有浏览器默认样式 此时继承性仍然存在 但是会优先显示浏览器的默认样式 -->
+    <!-- 1---a标签会继承父元素的color属性---但是会被浏览器默认的蓝色覆盖掉---优先显示浏览器默认的效果 -->
+    <!-- 2---h系列会继承父元素的font-size和font-weight属性---但是会被浏览器对h标签默认的字体大小和字体粗细设置覆盖---优先显示浏览器默认的效果 -->
+    <!-- 3---div标签不会继承父元素的宽度和高度---但是宽度看起来是继承了父元素的（是由div标签独占一行导致的） -->
+    <!-- 还有其他继承失效的情况---总之 是因为浏览器有默认设置 所以优先显示浏览器的效果 -->
+
+
+
+    <!-- <div class="father">
+        <a href="#">我是一个a标签</a>
+    </div> -->
+
+    <div class="father">
+        <h1>
+            我是h1
+        </h1>
+    </div>
+</body>
+</html>

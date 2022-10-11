@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        .red {
+            background-color: #f00;
+        }
+        .green {
+            background-color: #0f0;
+        }
+        .blue {
+            background-color: #00f;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 元素的层级关系
+元素层级问题：
+1---不同布局方式元素的层级关系：标准流布局 浮动布局 定位布局 三者之间的层级关系:
+定位 >  浮动  >   标准流
+
+2---不同定位形式之间的层级关系：
+相对 绝对 固定默认情况下层级相同 
+html中写在下面的元素层级更高---注意不是css 而是body中的标签 写在下面大的会覆盖上面的 会覆盖上面的元素
+
+-->
+ <div class="red"></div>
+ <div class="green"></div>
+ <div class="blue"></div>
+</body>
+</html>

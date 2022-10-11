@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background-color: #6c99c5;
+
+            /* 背景图片 */
+            background-image: url('./sky.png');
+
+            /* 背景平铺 */
+            /* background-repeat */
+            /* no-repeat---不平铺 不重复 */
+            /* 默认值repeat---表示水平和垂直方向都平铺 */
+            /* repeat-x---沿着水平方向平铺 */
+            /* repeat-y---沿着垂直方向平铺 */
+            /* no-repeat---用的比较多 */
+            /* background-repeat: no-repeat; */
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            background-repeat: no-repeat;/*就会只有一个*/
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景平铺 -->
+    <!-- background-repeat---bgr---完成背景不平铺的效果---repeat 重复 平铺-->
+
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        .red {
+            position: relative;
+            top: 0;
+            left: 0;
+            /* 设置z-index可以改变元素的层级
+            有的程序员常用操作就是设置值为999 表示层级最高 */
+            z-index: 1;
+            background-color: #f00;
+        }
+        .green {
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+            background-color: #0f0;
+        }
+        .blue {
+            position: fixed;
+            top: 200px;
+            left: 200px;
+            z-index: 999;
+            background-color: #00f;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 更改定位元素的层级
+场景：改变定位元素的层级
+属性名： z-index
+属性值： 数字
+数字越大 层级越高
+注意z-index只能更改定位元素的层级（相对 绝对 固定）
+-->
+<div class="red"></div>
+<div class="green"></div>
+<div class="blue"></div>
+
+</body>
+</html>

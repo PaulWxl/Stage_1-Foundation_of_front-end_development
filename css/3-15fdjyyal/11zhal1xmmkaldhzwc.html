@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 1226px;
+            height: 614px;
+            background-color: yellow;
+            margin: 100px auto;
+        }
+        .left {
+            float: left;
+            width: 234px;
+            height: 614px;
+            background-color: #800080;
+        }
+        .right  {
+            float: right;
+            width: 978px;
+            height: 614px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 小米模块案例
+需求： 使用浮动 完成设计图中布局效果
+布局套路： 要么竖着划分盒子 要么横着划分盒子 
+右侧放一个大盒子 待会只要在我们右侧的盒子里面放八个小盒子就可以了
+在布局中千万不要嫌盒子太多麻烦 是为了保证不容易出错的-->
+
+<div class="box">
+<div class="left"></div>
+<div class="right"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 需求： 让子盒子在父盒子中水平和垂直都居中（通用情况下） */
+        .father {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background-color: pink;
+        }
+        .son {
+            position: absolute;
+            /* 子元素先向下移动父元素的50% */
+            top: 50%;
+            /* transform: translateY(-50%); */
+            left: 50%;/*先让子元素往右移动父元素的一半*/
+            /*transform: translateX(-50%);/* 再让子元素往左移动自己的一半 */
+            /* 不能translate既有X又有Y 不能拆开来写 必须写在一起 用translate属性  */
+            /* 注意两个属性值的话必须用逗号隔开 */
+            transform: translate(-50%,-50%);
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    
+</body>
+</html>

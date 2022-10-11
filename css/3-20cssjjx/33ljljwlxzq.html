@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 如果四种状态都要实现---就必须按照LVHA的顺序书写 */
+        a:link {/*未访问过*/
+            color: #f00;
+        }
+        a:visited {/*访问过*/
+            color: aqua;
+        }
+        a:hover {/*悬停状态*/
+            color: #6c99c5;
+        }
+        a:active {/*鼠标按住不放的状态*/
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <!-- (了解)链接伪类选择器
+选择器拓展
+
+目标：能够使用伪类选择器选择元素的不同状态
+学校路径：
+1链接伪类选择器
+2焦点伪类选择器
+3属性选择器
+
+
+
+链接伪类选择器：
+场景： 常用于选中超链接  的不同状态
+选择器语法： 
+a:link()   选中a链接未访问过的状态  其实这是一个交集选择器的状态 表示
+既要选中a标签 又要选中a标签   未访问过的状态
+a:visited()    选中a链接    访问之后的状态
+a:hover()    选中鼠标悬停的状态
+a:active    选中鼠标按住不放的状态
+
+
+注意点：
+如果需要同时实现以上四种伪类状态效果 需要按照LVHA顺序书写
+记忆口诀： 男盆友送了你一个LV包包 你开心的HA哈笑
+
+:hover伪类选择器使用更为频繁，常用于选择  各类元素的  悬停状态-->
+<a href="#">我是a标签</a>
+</body>
+</html>

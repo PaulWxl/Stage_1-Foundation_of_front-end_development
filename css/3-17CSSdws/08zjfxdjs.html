@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+        }
+        .son {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 子绝父相
+子绝父相介绍：
+场景： 让子元素相对于父元素进行自由移动
+含义： 子元素：绝对定位---父元素：相对定位
+子绝父相好处：
+父元素是相对定位---不脱标---则对网页布局影响最小  -->
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

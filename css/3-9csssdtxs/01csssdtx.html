@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .son {
+            color: #f00;
+        } */
+
+        /* 注意 如果让父亲颜色为红色 子元素也会为红色---这就是继承性---子承父业 */
+        /* 注意不是父元素的所有属性都会继承的 */
+        /* 常见的可以继承父元素的属性---color font-相关的属性(font-style font-weight font-size font-family) text-align和text-indent(控制首行缩进的) line-height */
+        
+        .father {
+            color: #f00;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- css的继承性和层叠性---会计算css优先级权重  -->
+
+    <!-- 继承性---子元素默认继承父元素的样式---子承父业 -->
+    <div class="father">
+        父亲
+        <div class="son">
+            儿子
+        </div>
+    </div>
+</body>
+</html>

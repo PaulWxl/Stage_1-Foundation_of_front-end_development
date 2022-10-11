@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 如果不设置高度是看不到盒子的---因为背景图片无法把盒子撑开来 */
+            /* 但是可以只设置高度---宽度会自动产生 */
+            /* width: 400px; */
+            height: 400px;
+            background-color: #6c99c5;
+            /* 背景图片---bgi---background-image */
+            /* url中可以不带引号 */
+            /* 背景图片默认在水平和垂直方向是平铺的---浏览器会通过背景图片把整个盒子铺满 */
+            /* 背景图片---只是给盒子起到了装饰的作用---如果不给盒子设置高度---背景图片是撑不开盒子的---
+            类似于背景颜色---不会改变盒子的大小和位置 */
+            background-image: url(./sky.jpg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景图片 -->
+    <!-- background-image---简写bgi -->
+    <!-- background-image: url('图片的路径') -->
+    <div class="box"></div>
+    
+    
+</body>
+</html>

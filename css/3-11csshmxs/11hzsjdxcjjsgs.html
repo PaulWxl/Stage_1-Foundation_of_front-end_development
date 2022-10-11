@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+
+            /* 1---注意---width和height设置的是内容的宽度和高度 */
+            /* 2---设置border会撑大盒子（width和height会变大） */
+            /* 多出来的部分 在width和height中减去 */
+            width: 380px;
+            height: 380px;
+            background-color: green;
+            border: 10px solid #000;
+
+
+
+            /* 盒子的实际大小（宽度） = 左边框 + 内容宽度 + 右边框 = 10px + 400px + 10px*/
+            /* 宽度要求400px---多出了20px---只要想办法在某个地方把20px去掉就行 */
+            /* 常规操作---手动内减---计算出多余的部分之后 手动在内容中 减去即可 ---即width和height*/
+            /* 所以400-20=380px---把宽度设置为380px即可 */
+
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 需求---盒子尺寸400*400 背景绿色 边框10px 实线 黑色 -->
+
+
+    <!-- 问题： 盒子加了边框之后---宽度和高度会变大---不再是我们对盒子设置的宽度和高度了 -->
+    <!-- 所以需要计算出---盒子实际大小公式 -->
+    <!-- 盒子实际大小---初级计算公式 -->
+    <!-- 盒子宽度 = 左边框 + 内容宽度 + 右边框 -->
+    盒子高度 = 上边框 + 
+
+    <!-- 当盒子被border撑大后---如何满足需求? -->
+
+    <div>
+
+    </div>
+</body>
+</html>

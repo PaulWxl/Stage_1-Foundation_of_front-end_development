@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+        }
+        
+        /* 想在father内部 用伪元素模拟出一个盒子的效果  */
+        .father::before {
+            content: '我是一个伪元素';
+            /* display: inline-block; */
+            width: 100px;
+            height: 100px;
+            background-color: #6c99c5;
+        }
+
+        /* .father::after {
+            content: '我是一个伪元素';
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #6c99c5;
+        } */
+
+    </style>
+</head>
+<body>
+    <!-- 伪元素 
+目标： 能够使用伪元素在网页中创建内容
+伪元素： 一般页面中的非主体内容可以使用伪元素
+区别： 元素： html设置的标签---伪元素： 由CSS模拟出的标签效果
+种类： ::before---::after 
+::before: 在父元素内容的最前添加一个伪元素
+::after: 在父元素内容的最后添加一个伪元素
+伪元素必加属性： content(内容)---值可以用单引号括起来
+伪元素默认情况下为行内元素 所以不能直接设置宽度和高度 -->
+
+  <div class="father">father</div>
+</body>
+</html>

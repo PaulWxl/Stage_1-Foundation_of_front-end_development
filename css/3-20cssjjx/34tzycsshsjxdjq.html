@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 0px;
+            height: 0px;
+            border-top: 100px solid pink;
+            /* 透明色的关键字---transparent */
+            border-right: 00px solid transparent;
+            border-bottom: 100px solid transparent;
+            border-left: 200px solid transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- (拓展补充) 用css画三角形技巧(面试题)
+场景： 在网页中展示出小三角形时 除了可以使用图片外 还可以使用代码完成
+实现原理：
+利用盒子边框完成
+实现步骤： 
+1设置一个盒子
+2设置四周不同颜色的边框
+3将盒子宽高设置为0 删掉盒子的背景色 仅保留边框
+4得到四个三角形 选择其中一个后 其他三角形（边框）设置颜色为透明色 transparent-->
+<div></div>
+</body>
+</html>

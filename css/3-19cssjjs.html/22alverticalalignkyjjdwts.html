@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            background-color: blue;
+        }
+        img {
+            /* 法一：对img设置垂直对齐属性 vertical-align */
+            /*vertical-align: bottom;/*表示图片和文字的底部对齐---就不会有间隙了*/
+
+            /* 法二：把图片转换为块元素 */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- div不设高度由img标签撑开，此时img标签下面会存在额外间隙问题 -->
+    <!-- 注意垂直对齐属性 vertical-align只有行内元素和行内块元素才有 -->
+
+    
+    <div class="box">
+        <img src="./aside.png" alt="">
+    </div>
+</body>
+</html>

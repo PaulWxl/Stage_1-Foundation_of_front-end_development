@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+
+
+            /* 四行代码 */
+            /* background-color: #6c99c5;
+            background-image: url('./sky.png');
+            background-repeat: no-repeat;
+            background-position: 50% 50% ; */
+
+            /* 写成一行代码 */
+            /* background: color image repeat position; */
+            /* 连写的话推介书写顺序怒是 color > image > repeat > position  */
+            /* color image repeat position */
+            /* background: #6c99c5 url('./sky.png') no-repeat 50% 50%; */
+
+
+
+            /* 开发方法---当背景图片的宽和高和盒子一样时---可以省略掉color repeat position---直接写background: url */
+            /* background: url('./sky.png'); */
+
+
+
+            
+            /* 注意连写和单独写的覆盖问题---注意默认值---下的会把上方的覆盖掉 */
+            background-position: center center;
+             background: #6c99c5 url('./sky.png') no-repeat ;/*这样图片会在左上角（默认值）---而不是正中间*/
+
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景相关属性的连写形式 -->
+    <!-- 背景相关的多个属性可以连着写在一起 -->
+    <!-- background -->
+    <div class="box"></div>
+</body>
+</html>

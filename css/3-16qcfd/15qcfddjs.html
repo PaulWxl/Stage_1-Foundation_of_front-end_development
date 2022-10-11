@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+
+            /* 所以给在标准流中的父元素设置高度就好 蓝色盒子就会在底下了 */
+            height: 50px;
+        }
+        a:nth-child(n) {
+            box-sizing: border-box;
+            float: left;
+            text-decoration: none;
+            background-color: #ffc0cb;
+            font-size: 16px;
+            width: 80px;
+            height: 50px;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #000;
+        }
+        a:hover {
+            background-color: #6c99c5;
+        }
+        .blue {
+            width: 800px;
+            height: 300px;
+            background-color: blue;
+            
+        }
+    </style>
+</head>
+<body>
+<!-- 清除浮动
+目标： 能够认识清除浮动的目的 并且能够使用清除浮动的方法
+学习路径： 1---清除浮动的介绍
+2---清除浮动的方法 
+1.1 清除浮动的介绍
+含义： 清除浮动带来的影响
+影响： 如果子元素浮动了 此时子元素不能撑开标准流的块级父元素
+原因： 子元素浮动后脱标---不占位置  
+目的： 需要让在标准流中的父元素有高度 不影响其他网页元素的布局
+
+注意子元素变为浮动元素后 脱标 不在标准流中占位置 若父元素还在标准流中 那么父元素在不设置宽度和高度的前提下
+不会被子元素中的内容撑开-->
+
+
+<ul>
+    <li><a href="#">新闻1</a></li>
+    <li><a href="#">新闻2</a></li>
+    <li><a href="#">新闻3</a></li>
+    <li><a href="#">新闻4</a></li>
+    <li><a href="#">新闻5</a></li>
+    <li><a href="#">新闻6</a></li>
+    <li><a href="#">新闻7</a></li>
+    <li><a href="#">新闻8</a></li>
+</ul>
+
+<div class="blue"></div>
+</body>
+</html>

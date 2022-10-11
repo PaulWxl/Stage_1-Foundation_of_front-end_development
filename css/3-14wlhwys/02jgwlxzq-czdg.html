@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 找到第1个子元素 并且为li标签 */
+        /* 注意li：first-child  的含义是： 既是li标签 又是父容器的第一个元素 */
+        /* 这是交集选择器的样式 */
+        li:first-child {
+            background-color: #6c99c5;
+        }
+        /* 找到最后一个子元素 并且为li标签 */
+        li:last-child {
+            background-color: pink;
+        }
+
+        /* 找到第3个子元素，并且为li标签 */
+        li:nth-child(3) {
+            background-color: skyblue;
+        }
+
+        /* 找到倒数第三个子元素 并且为li标签 */
+        li:nth-last-child(3) {
+            background-color: purple;
+        }
+</style>
+</head>
+<body>
+    <!-- 结构伪类选择器 -->
+    <!-- /* 注意父容器之后要加冒号 */ -->
+    <!-- 目标：用结构伪类选择器---定位html中的元素 -->
+    <!-- 作用： 能够根据元素在html中的---结构关系----直接查找到元素---可以减少类的依赖---保持代码整洁
+    场景： 常用于查找某父级选择器中的子元素
+
+选择器：
+first-child{}
+last-child{}
+nth-child(n){}
+nth-last-child(n){}-->
+
+  <ul>
+    <li>我是1个li</li>
+    <li>我是2个li</li>
+    <li>我是3个li</li>
+    <li>我是4个li</li>
+    <li>我是5个li</li>
+    <li>我是6个li</li>
+    <li>我是7个li</li>
+    <li>我是8个li</li>
+    <li>我是9个li</li>
+    <li>我是10个li</li>
+  </ul>
+
+
+</body>
+</html>

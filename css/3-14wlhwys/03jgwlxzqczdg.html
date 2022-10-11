@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 找到偶数个li */
+        li:nth-child(2n) {
+            background-color: #6c99c5;
+        }
+        /* 或者 */
+        li:nth-child(even) {
+            background-color: orange;
+        }
+
+
+        /* 找到奇数个li */
+        li:nth-child(2n+1) {
+            background-color: pink;
+        }
+
+        li:nth-child(odd) {
+            background-color: skyblue;
+        }
+
+        li:nth-child(2n-1) {
+            background-color:aqua;
+        }
+
+
+        /* 找到前5个 */
+        /* 注意n要求必须写在前面 不能写在后面 */
+        li:nth-child(-n+5) {
+            background-color: purple;
+        }
+
+        /* 找到后5个 */
+        /* 5+n 为 5 6 7 8 ... */
+        li:nth-child(n+5) {
+            background-color: green;
+        }
+        ul {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- :nth-child(n)中n的注意点
+1---n为自然数
+2---通过n可以组成常见公式
+3---注意n要求必须写在前面 不能写在后面
+偶数： 2n even
+奇数： 2n+1 2n-1 odd
+找到前5个 -n+5
+找到从第5个往后 n+5-->
+
+
+<ul>
+    <li>我是1个li</li>
+    <li>我是2个li</li>
+    <li>我是3个li</li>
+    <li>我是4个li</li>
+    <li>我是5个li</li>
+    <li>我是6个li</li>
+    <li>我是7个li</li>
+    <li>我是8个li</li>
+    <li>我是9个li</li>
+    <li>我是10个li</li>
+  </ul>
+</body>
+</html>

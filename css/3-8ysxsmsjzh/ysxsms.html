@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #6c99c5;
+            /* 这样设置完之后 仍然是一个块元素占满一行 */
+
+
+            /* 判断块元素的依据就是---在Chrome浏览器中查看是否是display:block */
+        }
+    </style>
+</head>
+<body>
+    <!-- 元素显示模式---以及转换 -->
+    <!-- 块元素 行内元素 行内块元素 元素显示模式转换 -->
+
+    <!-- 块元素---display :block---div p h ul li  -->
+    <!-- 根据经验---这些块元素---独占一行---即一行中只能显示一个块元素 -->
+    <!-- 宽度会默认占满父元素的所有宽度---高度默认由自身的内容撑开 -->
+    <!-- 可以设置宽度和高度 --- 确实 我们经常给盒子设置宽高-->
+    <div>我是div</div>
+    <div>我是div</div>
+    <div>我是div</div>
+</body>
+</html>

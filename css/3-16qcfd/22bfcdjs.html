@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            /* 把father盒子转换成BFC盒子 解决：清除浮动
+            变为BFC盒子之后 默认的特点是要将内部的子元素全部包裹在内
+            1---转换为浮动元素后可以变为BFC盒子
+            2---转换为行内块元素可以变为BFC盒子
+            3---给父元素设置overflow属性 属性值不为visible也可以变为BFC盒子--- */
+            /* float: left; */
+            /* display: inline-block; */
+            overflow: hidden;
+            width: 400px;
+            background-color: pink;
+        }
+        .son {
+            float: left;
+            width: 100px;
+            height: 400px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 清除浮动
+拓展补充： BFC的介绍
+快格式化上下文（Block Formatting Context）：BFC
+是Web页面的可视CSS渲染的一部分 是块盒子的布局过程发生的区域 也是浮动元素与其他元素交互的区域
+
+
+创建BFC的方法：
+1---html标签是BFC盒子
+2---浮动元素是BFC盒子
+3---行内块元素是BFC盒子
+4---overflow属性取值不为visible.如：auto hidden
+等
+
+BFC盒子常见特点：
+1---BFC盒子会默认包裹住内部子元素（标准流 浮动）---应用：清除浮动
+2---BFC盒子本身与子元素之间不存在margin的塌陷现象---应用： 解决margin的塌陷
+等-->
+
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

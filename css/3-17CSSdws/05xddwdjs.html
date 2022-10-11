@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        .red {
+            background-color: #f00;
+        }
+        .green {
+            position: relative;
+            top: 100px;
+            left: 100px;
+            background-color: #0f0;
+        }
+        .blue {
+            background-color: #00f;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 相对定位的介绍
+介绍： 自恋型定位 相对于自己之前的位置进行移动
+代码： position: relative
+特点： 
+1---需要配合方位属性实现移动---不设置偏移值无法移动
+2---方位是相对于自己原来的位置进行移动---top/bottom/left/right
+所以也叫自恋型的定位---每一次都是看自己来进行相关的偏移
+3--原本的位置仍然在页面中占位置---蓝盒没有向上补位---说明定位后没有脱标
+应用场景：
+1---配合绝对定位组CP(子绝父相)
+2---用于小范围的移动 -->
+<div class="red"></div>
+<div class="green"></div>
+<div class="blue"></div>
+</body>
+</html>

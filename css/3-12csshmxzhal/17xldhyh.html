@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            border-top: 2px solid orange;
+            border-bottom: 1px solid #edeef0;
+        }
+        .box a {
+            text-decoration: none;
+            display: inline-block;
+            height: 40px;
+            /* 设置了行高就不用设置上下内边距了 */
+            line-height: 40px;
+            color: #4c4c4c;
+            /* padding设置两个值时 第一个值是上下的内边距 第二个值是左右的内边距 */
+            /* 只设置一个值时是上下左右的内边距 */
+            /* 当为0时 不需要加单位 */
+            padding: 0 20px;
+            border-left: 1px solid #edeef0;
+            /* border-right: 1px solid #edeef0; */
+        }
+        .box a:hover {
+            background-color: #edeef0;
+            color: #ff8400;
+        }
+        .box .a4 {
+            border-right: 1px solid #edeef0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 新浪导航的优化 -->
+    <!-- 需求 优化之前的新浪导航 如果每个导航的字数增加 如何完成效果 -->
+    <div class="box">
+        <a href="">新浪导航新浪导航新浪导航新浪导航</a>
+        <a href="">新浪导航</a>
+        <a href="">新浪导航新浪导航</a>
+        <a href="" class="a4">新浪导航新浪导航新浪导航新浪导航新浪导航新浪导航</a>
+    </div>
+</body>
+</html>

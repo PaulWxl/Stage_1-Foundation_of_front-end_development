@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        .red {
+            background-color: #f00;
+        }
+        .green {
+            background-color: #0f0;
+            /* 设置定位方式 */
+            position: absolute;
+            /* 设置偏移值 */
+            right: 0;
+            bottom: 0;
+        }
+        .blue {
+            background-color: #00f;
+        }
+    </style>
+</head>
+<body>
+    <!-- 绝对定位
+介绍： 拼爹型定位 相对于非静态定位的父元素进行定位移动
+代码： position: absolute
+特点：
+1---需要配合方位属性实现浮动---必须设置偏移值才可以移动
+2---默认相对于浏览器可视区域进行移动---相对于浏览器的视野而言
+3---绝对定位后在标准流中不占位置---脱标
+应用场景： 
+1---配合相对定位组CP（子绝父相）  -->
+<div class="red"></div>
+<div class="green"></div>
+<div class="blue"></div>
+</body>
+</html>

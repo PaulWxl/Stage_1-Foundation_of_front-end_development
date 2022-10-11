@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            width: 400px;
+            background-color: pink;
+            /* 给父元素设置overflow:hidden即可清除子元素浮动带来的的影响 */
+            overflow: hidden;
+        }
+        .son {
+            /* 子元素浮动之后 脱标 父元素在没有设置高度的前提下 没有内容无法撑开 */
+            float: left;
+            width: 100px;
+            height: 400px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 清除浮动的方法： 给父元素设置overflow:hidden
+操作： 直接给父元素设置overflow:hidden
+特点：
+优点： 方便 
+
+总结： 清除浮动的方法
+1---直接给父元素设置高度
+2---额外标签法
+3---单伪元素清除法
+4---双伪元素清除法
+5---给父元素设置overflow:hidden 
+
+
+实际工作中伪元素清除法用的更多一点（还可以解决margin-top的塌陷现象 消除子元素对父元素的影响）-->
+<div class="father">
+    <div class="son">
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            /* 祖先元素中有定位---相对于最近的 有定位的祖先元素进行移动 */
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+        }
+        .son {
+            /* 祖先元素中有定位---相对于最近的 有定位的祖先元素进行移动 */
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+        }
+        .sun {
+            /* 绝对定位 */
+            /* 祖先元素中没有定位---默认情况下相对于浏览器视野进行移动 */
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 绝对定位在默认情况下是相对于浏览器的视野移动
+绝对定位到底相对于谁进行偏移
+绝对定位相对于谁移动？
+
+1---祖先元素中没有定位---默认情况下相对于浏览器视野进行移动
+2---祖先元素中有定位(除静态之外的后三种)---相对于最近的 有定位的祖先元素进行移动-->
+<div class="father">
+    <div class="son">
+        <div class="sun"></div>
+    </div>
+</div>
+</body>
+</html>

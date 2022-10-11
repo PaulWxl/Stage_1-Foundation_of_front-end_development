@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* a标签是行内元素 */
+        a {
+            /* 行内元素设置宽度和高度无效 */
+            width: 150px;
+            height: 200px;
+            /* 如果需要让他可以设置宽度和高度---就需要把它变成行内块元素或者块元素 */
+            /* 如果想要一个元素占一行---就用块元素---小米商城 */
+            /* 如果想多个元素在一行上---就用行内块元素 */
+
+
+            /* 从语法角度来说 转换成行内元素也可以---display:inline---但是非常少用 */
+            /* display:block; */
+            display: inline-block;
+            background-color: #6c99c5;
+        }
+    </style>
+</head>
+<body>
+    <!-- 元素显示模式转换 -->
+    <!-- 改变元素默认的显示特点---让元素符合布局要求 -->
+    <!-- 块元素和行内块元素使用的多 -->
+    <a href="#">我是一个a标签</a>
+    <a href="#">我是一个a标签</a>
+    <a href="#">我是一个a标签</a>
+</body>
+</html>

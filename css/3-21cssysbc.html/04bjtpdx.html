@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            background: url('./fjt.png') no-repeat;
+        }
+        div:nth-child(2) {
+            background-size: 400px 400px;
+        }
+        div:nth-child(3) {
+            background-size: 100% 100%;/*相对于当前盒子自身的宽高百分比*/
+        }
+        div:nth-child(4) {
+            background-size: contain;
+        }
+        div:nth-child(5) {
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景图片大小
+作用： 设置背景图片大小
+语法： bg-size： 宽度 高度
+取值：
+数字+px ：  场景：简单方便+常用
+百分比： 相对于    当前盒子    自身的宽高    百分比
+contain:  包含，将背景图片   等比例缩放，直到     不会超出盒子   的最大
+cover:    覆盖，将背景图片   等比例缩放，直到     刚好填满       整个盒子没有空白  
+
+
+数字 + px  和   百分比    用的是最多的   -->
+
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>

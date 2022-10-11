@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            background-color: pink;
+        }
+        .son {
+            position: absolute;
+            /* left: 200px;
+            top: 0; */
+            /* 先让子元素往右移动父元素的一半
+            再让子元素往左移动自己的一半 */
+            /* left50%是相对于父元素的 */
+            left: 50%;/*先让子元素往右移动父元素的一半*/
+            /* X指的是x轴方向---默认向右为正方向---往左走50%要加负号 */
+            /* transform: translateX(-50%);是相对于子元素的 */
+            transform: translateX(-50%);/* 再让子元素往左移动自己的一半 */
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 子绝父相水平居中案例
+需求： 使用子绝父相 让子盒子在父盒子中水平居中（父子元素任意宽度下都能实现） -->
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

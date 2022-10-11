@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            /* 无效---给行内元素设置宽度和高度无效 */
+            width: 300px;
+            height: 300px;
+            background-color: #6c99c5;
+        }
+        .father > img {
+            margin-top: 2em;
+        }
+    </style>
+</head>
+<body>
+    <!-- 行内元素 -->
+    <!-- display:inline -->
+    <!-- 多个行内元素可以只占一行--- -->
+    <!-- 宽度 高度都是默认由自身内容撑开 -->
+    <!-- 宽度高度无法设置 -->
+    <!-- a span strong --->
+    <!-- 注意img在Chrome调试工具上写的是inline 即行内元素 实际开发中按照行内块元素处理 inline-block 即可以多个元素在一行上 而且可以设置宽度和高度 -->
+    <span>我是span</span>
+    <span>我是span</span>
+    <span>我是span</span>
+
+    <div class="father"><img src="./sky.png" alt=""></div>
+</body>
+</html>

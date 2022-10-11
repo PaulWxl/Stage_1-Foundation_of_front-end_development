@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        .red {
+            background-color: #f00;
+        }
+        .green {
+            /* 隐藏元素本身 并且在网页中占位置 */
+            /* visibility: hidden; */
+            display: none;/*隐藏元素本身 并且在网页中不占位置*/
+            background-color: #0f0;
+        }
+        .blue {
+            background-color: #00f;
+        }
+</style>
+</head>
+<body>
+    <!-- 元素本身隐藏属性
+场景： 让元素本身在屏幕中不可见。如：鼠标:hover之后元素隐藏
+常见属性： 
+1visiblity:hidden
+2display:none
+区别：
+1visibility:hidden隐藏元素本身 并且在网页中占位置
+2display:none隐藏元素本身 并且在网页中不占位置
+注意点：
+开发中经常会通过display属性完成元素的显示或隐藏切换
+display:none  (隐藏)
+display:block  (显示)   -->
+<div class="red"></div>
+<div class="green"></div>
+<div class="blue"></div>
+</body>
+</html>

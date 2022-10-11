@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 一开始基本都是要去除标签默认的padding和margin */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            height: 40px;
+            background-color: #333;
+        }
+        .nav {
+            width: 1226px;
+            height: 100px;
+            background-color: #ffc0cb;
+            margin: 0 auto;
+        }
+        .banner {
+            width: 1226px;
+            height: 460px;
+            background-color: yellow;
+            margin: 0 auto;
+        }
+        .left {
+            width: 234px;
+            height: 460px;
+            background-color: #ffa500;
+            float: left;
+        }
+        .right {
+            width: 992px;
+            height: 460px;
+            background-color: #87ceeb;
+            /* 注意默认左边的小盒子和右边的小盒子都是标准流中的块元素 所以会独占一行 */
+            float: right;
+            /* 会受到上方元素的影响 会受到banner的影响 banner在标准流中是块元素 会独占一行 所以右边的小盒子不会上去 */
+            /* 可以让左边的小盒子也进行浮动 --- 让他进行脱标 --- 这样就能多个元素在一行上了 */
+
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 网页的头部: header -->
+    <div class="header">
+
+    </div>
+
+    <!-- 网页的导航 -->
+    <div class="nav">
+
+    </div>
+
+    <!-- 网页的轮播图 -->
+    <div class="banner">
+        <!-- 左边的小盒子 -->
+        <div class="left"></div>
+
+
+        <!-- 右边的小盒子 -->
+        <div class="right"></div>
+    </div>
+</body>
+</html>

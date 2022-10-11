@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .father {
+            box-sizing: border-box;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /* 给父元素设置border-top或者padding-top */
+            /* border-top: 1px solid #000; */
+            /* padding-top: 1px; */
+            /* overflow: hidden; */
+            /* display: inline-block; */
+            float: left;
+
+        }
+        .son {
+            width: 40px;
+            height: 40px;
+            background-color: #00f;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 外边距折叠现象---2塌陷现象 -->
+    <!-- 场景： 嵌套的块元素---子元素的margin-top会作用在父元素上 -->
+    <!-- 原因： 因为子元素嵌套在父元素之中---父元素会被子元素影响---
+        子元素和父元素的margin-top是紧贴着的---父元素本身没有margin和padding---但是由于子元素的margin-top有影响---所以会连带着父元素一起向下移动 -->
+    <!-- 结果： 导致父元素一起往下移动 -->
+    <!-- 解决： 想办法把父子元素的margin-top隔开就可以了---
+        1---给父元素设置border-top 或者 padding-top (分隔父子元素的margin-top)---父元素有了border之后---父子元素的margin top 就会被分隔开
+    2---给父元素设置overflow-hidden
+    3---转换成行内块元素
+    4---设置浮动   float:-->
+
+
+
+    <!-- 注意嵌套的话---子元素的盒子会在父元素盒子的左上角 -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

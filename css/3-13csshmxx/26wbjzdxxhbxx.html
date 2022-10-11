@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 300px;
+            height: 300px;
+        }
+        .box1 {
+            background-color: blue;
+            margin-bottom: 200px;
+        }
+        .box2 {
+            background-color: red;
+            /* margin-top: 200px; */
+        }
+        /* 垂直布局的块元素margin会合并---合并为最大值 */
+        /* 方法：只给其中一个块元素设置垂直方向的margin */
+
+    </style>
+</head>
+<body>
+     <!-- 外边距折叠现象---1垂直方向的块元素设置的margin的合并现象 -->
+     <!-- 出现场景：垂直布局的块级元素---上下的margin会合并在一起 -->
+     <!-- 结果： 最终两者上下之间的距离只为margin的最大值 -->
+     <!-- 解决：避免就好---只给其中一个盒子设置margintop或bottom即可 -->
+
+
+     <div class="box1"></div>
+     <div class="box2"></div>
+</body>
+</html>

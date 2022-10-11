@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 需求：蓝盒子盖住红盒子的1/4 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        .red {
+            background-color: #f00;
+        }
+        .blue {
+            /* 设置定位方式 */
+            position: absolute;
+            /* 设置偏移值 */
+            left: 100px;
+            top: 100px;
+            background-color: #00f;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 定位
+目标： 能够说出四种定位的应用场景 能够使用子绝父相完成元素水平垂直案例
+学习路径：
+1---定位的基本介绍
+2---定位的基本使用
+3---静态定位
+4---相对定位
+5---绝对定位
+6---子绝父相
+7---固定定位
+8---元素的层级关系
+
+
+网页常见布局方式： 
+1---标准流
+1.1---块级元素独占一行---垂直布局
+1.2---行内元素/行内块元素多个在一行---水平布局
+
+2---浮动脱标
+2.1---可以让原本垂直布局的块级元素变成水平布局
+
+3---定位---终极手段
+3.1---可以让元素自由的摆放在网页的任意位置
+3.2---一般用于盒子之间的层叠情况  
+
+
+3种方法递进使用
+
+
+定位的常见应用场景
+1---可以解决盒子与盒子之间的层叠问题---让一个盒子叠在另外一个盒子的上面---
+内在逻辑： 定位之后的元素层级最高 会层叠在其他盒子上面
+
+2---可以让盒子始终固定在屏幕中的某个位置
+
+
+使用定位的步骤
+1---设置定位方式
+属性名：position
+常见属性值：
+静态定位： static
+相对定位： relative
+绝对定位:  absolute
+固定定位： fixed
+
+
+
+2--设置偏移值
+偏移值设置分为两个方向 水平和垂直方向各选一个使用即可
+选取的原则一般是就近原则（离哪边近用哪个）
+
+
+设置完定位方式后设置属性 直接写left/right/top/bottom：
+水平：  left 距离左边的距离   right  距离右边的距离
+垂直：  top  距离上边的距离   bottom 距离下边的距离
+属性值： 数字+px-->
+
+
+
+<div class="red"></div>
+<div class="blue"></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            background-color: pink;
+            width: 1000px;
+            height: 1000px;
+            line-height: 1000px;
+        }
+        img {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!-- 使用line-height让img标签垂直居中问题(之前学了子绝父相的方法)  line-height放在父元素中 必须设置成和父元素的高度一样的高度才可以
+    ---img中必须配合使用vertical-align：center才可以 
+
+
+     如果需要让块元素在一行中显示多个 浮动>行内块哦  可以避免一些垂直居中的问题  ~~~！-->
+
+
+    <div class="father">
+        <img src="./aside.png" alt="">
+    </div>
+</body>
+</html>

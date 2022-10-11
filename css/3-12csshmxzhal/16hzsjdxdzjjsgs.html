@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 240px;
+            height: 240px;
+            background-color: pink;
+            border: 10px solid #000;
+            /* padding也会撑大盒子 */
+            padding: 20px;
+
+
+            /* 注意在Chrome中的检查中的body中盒子会被黑色实线框柱 */
+        }
+    </style>
+</head>
+<body>
+    <!-- 需求：盒子尺寸300*300 背景粉色 边框10px实线黑色 上下左右20px的内边距 如何完成？ -->
+    <!-- 盒子实际大小---终极计算公式 -->
+    <!-- 盒子宽度 = 左边框 + 左内边距 + 内容宽度 + 右内边距 + 右边框 -->
+    <!-- 盒子高度 = 上边框 + 上内边距 + 内容高度 + 下内边距 + 下边框 -->
+
+
+    <!-- 问题：当盒子被border和padding撑大后 应该如何满足需求？ -->
+    <!-- 一模一样 手动内减 多了多少---就在width和height中减去多少 -->
+    <!-- 实际360 需求300 多60 --- 所以300 - 60 = 240  -->
+
+
+
+    <div>
+
+    </div>
+</body>
+</html>

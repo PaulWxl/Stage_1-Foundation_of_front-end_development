@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+            background: url('./sky.png') no-repeat center center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 使用div必须设置盒子有宽度和高度---否则图片无法把盒子 撑起来 -->
+   <!-- 背景图片仅仅只是CSS样式---无法撑开盒子 -->
+    <div class="box"></div>
+
+    <!-- img标签---不用设置宽高---以图片原始大小展示 -->
+    <img src="./sky.png" alt="">
+</body>
+</html>

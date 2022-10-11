@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+        }
+        .son {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+        }
+        .sun {
+            /* 此时son有绝对定位 sun直接子绝父绝即可！ */
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <!-- 拓展补充：子绝父绝的特殊场景
+场景： 在使用子绝父相的时候，发现父元素已经有绝对定位了 此时直接子绝即可！
+即使用子绝父绝！
+原因：
+父元素已经有定位已经满足要求 如果盲目修改父元素定位方式 可能会影响之前写好的布局 -->
+<div class="father">
+    <div class="son">
+        <div class="sun"></div>
+    </div>
+</div>
+</body>
+</html>

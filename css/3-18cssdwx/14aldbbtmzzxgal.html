@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            position: relative;
+            width: 600px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        .box .shadow {
+            /* 块元素独占父元素的一行是标准流的特点---脱标后宽高由内容撑开 */
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 600px;
+            height: 100px;
+            background-color: rgba(0,0,0,0.6);
+        }
+    </style>
+</head>
+<body>
+    <!-- 案例 底部半透明遮罩效果
+根据设计图 通过代码在网页中完成一致的效果
+
+
+
+透明度： 颜色使用rgba(1,2,3,a)
+注意： 脱标后的元素宽高由内容撑开！！！没有内容就必须设置宽高！！！ -->
+
+<div class="box">
+    <div class="shadow"></div>
+</div>
+</body>
+</html>

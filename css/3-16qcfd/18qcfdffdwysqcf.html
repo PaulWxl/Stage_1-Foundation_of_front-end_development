@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 400px;
+            background-color: pink;
+        }
+        .son {
+            float: left;
+            width: 100px;
+            height: 400px;
+            background-color: blue;
+        }
+        /*.father::after {
+            content: '';
+            /* 在父元素包裹的子元素的内容的最后添加一个块元素 因为伪元素默认情况下是行内元素 所以
+            需要把行内元素转化为块元素 */
+           /* display: block;
+            /* 给添加的块级元素设置clear:both */
+           /* clear: both;
+        }*/
+        /* 为了避免CSS代码增多 CSS中提供了一个方法： 把.father这种专属的类名改成
+        .clearfix---这个是专门清除浮动的方法*/
+        /* 注意需要给father添加类名的.clearfix */
+        /* 针对伪元素：早期的写法写写一个冒号 但是在CSS新版本中 要求针对伪元素用两个冒号---
+        而针对之前讲的伪类选择器（：hover）是用一个冒号---CSS新版本就是为了区分伪类选择器和伪元素使用的冒号个数不一样 */
+        .clearfix::after {
+            content: '';
+            display: block;
+            /* 给添加的块元素设置clear:both  */
+            clear: both;
+
+
+            /* 如果content：''为空 那么可以不设置height： 0和visibility: hidden---
+            设置content： ‘.’ 的目的是为了防止有些老版本的浏览器解析js代码出现错误    */
+            /* 下面这两行是为了在网页中看不到伪元素设置的 */
+            height: 0;
+
+
+            /* 让当前元素隐藏起来 让用户在网页中看不到它 ---解决一些老版本浏览器问题---会在content中设置
+            content:'.'  */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- 清除浮动的方法： 单伪元素清除法
+操作： 用伪元素替代了额外标签
+1： 基本写法   2： 补充写法
+特点：
+优点：项目中使用 直接给标签加类即可清除浮动
+
+
+注意 伪元素在默认情况下是行内元素 所以需要转化为块元素
+
+这种方法常用-->
+
+ <!-- 注意需要给father添加类名的.clearfix  -->
+
+
+
+ <!-- 这种方法如果其他父元素也要清除浮动 那么直接给他添加类 就在原有类名后面直接空格 加clearfix即可
+ 这样CSS代码也不用多 -->
+<div class="father clearfix">
+    <div class="son"></div>
+</div>
+
+</body>
+</html>

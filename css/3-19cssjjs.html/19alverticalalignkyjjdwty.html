@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        input {
+            box-sizing: border-box;
+            height: 50px;
+            /* 行内元素或行内块元素的对齐方式可以使用vertical-align改变对齐方式 */
+            /* vertical-align: bottom; */
+            /* 法二： 两个input标签同时设置浮动 脱标后不会有垂直对齐问题 */
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- （拓展补充）项目中vertical-align可以解决的问题
+1---文本框和表单按钮无法对齐问题
+ input是行内块元素---只有行内块元素有对齐问题  -->
+ <input type="text" class="text"><input type="button" value="百度一下" class="button">
+</body>
+</html>

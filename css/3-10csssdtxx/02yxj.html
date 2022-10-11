@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 7---!important---最强外挂 */
+        /* !important > 行内样式 */
+        /* 直接在属性值的后面 分号的前面 写上!important即可 */
+        /* 注意!important 不能提升继承性的优先级---只要是继承性优先级都是最低的 */
+        /* 实际工作中不建议使用!important（用的少） */
+        p {
+            color: purple !important;
+        }
+        /* 5---id选择器 */
+        /* id选择器 > 类选择器 */
+        #one {
+            color: orange;
+        }
+        /* 4---类选择器 */
+        /* 类选择器 > 标签选择器 */
+        .son {
+            color: pink;
+        }
+
+        /* 3---标签选择器 */
+        /* 标签选择器 > 通配符选择器 */
+        p {
+            color: #000;
+        }
+        /* 2---通配符选择器---即 * */
+        /* 通配符选择器 > 继承性 */
+        * {
+            color: #f00;
+        }
+
+
+        /* 1---继承 */
+        .father {
+            color: #6c99c5;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 优先级 -->
+    <!-- 计算css权重 解决css冲突问题 -->
+    <!-- 优先级高的选择器会覆盖掉优先级低的选择器 -->
+    <!-- 继承 < 通配符选择器 < 标签选择器 < 类选择器 < id选择器 < 行内样式 < !important  -->
+    <div class="father">
+        <!-- 6---行内样式---就是body中标签身上直接写上style属性 -->
+        <!-- 行内样式 > id选择器 -->
+        <p class="son" id="one" style="color: skyblue;">我是一个标签</p>
+    </div>
+</body>
+</html>

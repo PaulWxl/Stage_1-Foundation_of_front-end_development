@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            /* 给三个盒子都设置左浮动 */
+            /* 浮动找浮动 也要排列顺序 会在上一个浮动元素后面进行浮动 */
+            /* float: left; */
+            float: right;
+            width: 200px;
+            height: 200px;
+        }
+
+        .red {
+            background-color: #f00;
+        }
+        .green {
+            background-color: #0f0;
+            /* float: left;此时绿盒子脱标 不再在标准流中占位置了 蓝盒子补位 往上移动 */
+            /* 浮动元素可以遮盖住地面上的标准流元素 比标准流元素高半个级别 */
+        }
+        .blue {
+            background-color: #00f;
+            /* width: 210px;
+            height: 210px; */
+        }
+    </style>
+</head>
+<body>
+    <!-- 浮动的特点
+1---浮动元素会脱离标准流（简称：脱标） : 在标准流中不占位置
+如果把标准流想象成地面 浮动元素相当于从地面飘到了空中 
+2---浮动元素比标准流高半个级别 显示时可以遮盖住标准流中的元素 就好比是一个人在天上可以遮住下面的所有人
+3---浮动元素之间也有排列顺序  这个浮动元素会在上一个浮动元素的后面浮动 （记忆：上流层次的人物也有排列顺序） ----->
+<div class="red"></div>
+<div class="green"></div>
+<div class="blue"></div>
+</body>
+</html>

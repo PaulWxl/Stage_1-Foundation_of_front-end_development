@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            border: 10px solid #000;
+            padding: 20px;
+            /* 自动内减: css3盒模型---box-sizing: border-box ---width和height就不用自己设置
+            ---此时width和height设置的是盒子实际的大小和宽度---不需要手动内减 */
+            /* 浏览器自动计算多余大小---自动在内容中减去 */
+            box-sizing: border-box;/*css3自动内减*/
+        }
+
+        /* 自动内减 */
+    </style>
+</head>
+<body>
+    <!-- 需求 盒子尺寸300*300 背景粉色 边框10px实线黑色 上下左右20px的内边距 -->
+
+
+
+    <!-- 解决方法 1---手动内减 -->
+
+    <!-- 实际工作中会出现很多很多盒子---如果每个盒子都手动内减---就比较麻烦 -->
+
+
+    <!-- 2---自动内减 -->
+    <!-- 设置一个属性---浏览器会自动计算多出多少---自动在内容中减去 -->
+    <!-- 用css3盒模型---属性名----box-sizing ---属性值：border-box-->
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 如果是复合选择器---需要权重叠加计算---判断优先级 */
+        /* （0,0,0,0）---四级数字---第一级是行内样式的个数---第二级是id选择器的个数---第三级是类选择器的个数---第四级是标签选择器的个数 */
+        /* 从第一级数字开始比较 比较出来了后面统统不看 相同往后比---如果所有数字都相同 表示优先级相同 则比较层叠性（谁写在最下面 谁说了算）*/
+        /* 注意 如果!important不是用在继承性---那么他的优先级最高 */
+        
+        div #one {/*（0， 1, 0， 1）*/
+            color: orange;
+        }
+        .father .son {/*（0，0, 2， 0）*/
+            color: skyblue;
+        }
+        .father p {/*（0， 0， 1， 1）*/
+            color:purple
+        }
+        div p {/*（0, 0, 0, 2）*/
+            color: pink;
+        }
+
+        /* 综合比较四个的权重计算公式---所以应该是orange */
+    </style>
+</head>
+<body>
+    <div class="father">
+        <p class="son" id="one">我是一个标签</p>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a:nth-child(n) {
+            box-sizing: border-box;
+            float: left;
+            text-decoration: none;
+            background-color: #ffc0cb;
+            font-size: 16px;
+            width: 80px;
+            height: 50px;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #000;
+        }
+        a:hover {
+            background-color: #6c99c5;
+        }
+    </style>
+</head>
+<body>
+    <!-- 网页导航案例
+需求： 使用浮动 完成设计图中布局效果
+根据标签语义化： 整体是ul   每一项是li   li里面放a即可
+书写网页导航步骤：
+1---清除默认的margin和padding
+2---找到ul 去除小圆点
+3---找到li标签 设置浮动让li一行中显示 
+4---找到a标签 设置宽高 但是 a标签默认是行内元素 不能设置宽高
+法一： 给a标签设置display:inline-block
+法二： 给a标签设置display:block
+法三： 给a设置浮动 变为浮动元素后就可以设置宽度和高度了 -->
+
+<ul>
+    <li><a href="#">新闻1</a></li>
+    <li><a href="#">新闻2</a></li>
+    <li><a href="#">新闻3</a></li>
+    <li><a href="#">新闻4</a></li>
+    <li><a href="#">新闻5</a></li>
+    <li><a href="#">新闻6</a></li>
+    <li><a href="#">新闻7</a></li>
+    <li><a href="#">新闻8</a></li>
+</ul>
+</body>
+</html>

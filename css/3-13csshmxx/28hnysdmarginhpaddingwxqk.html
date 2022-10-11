@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 600px;
+            height: 100px;
+            background-color: #6c99c5;
+        }
+        span {
+            /* 对行内元素来讲---水平的margin和padding有效 */
+            margin-right: 20px;
+            padding-right: 20px;
+
+
+            /* 垂直方向的margin和padding无效 */
+            margin-bottom: 20px;
+            margin-top: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+
+            /* 实际工作中要避免给行内元素设置垂直方向的margin和padding */
+        }
+    </style>
+</head>
+<body>
+    <!-- 行内元素的margin和padding无效情况 -->
+    <!-- 场景： 给行内元素设置垂直的margin和padding时 -->
+    <!-- 结果：水平方向的margin和padding有效---垂直方向的margin和padding无效 -->
+    <div></div>
+    <span>我是一个span标签</span><span>我是一个span标签</span><span>我是一个span标签</span><span>我是一个span标签</span><span>我是一个span标签</span>
+    <div></div>
+</body>
+</html>

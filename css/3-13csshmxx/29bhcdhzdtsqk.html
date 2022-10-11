@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: #6c99c5;
+        }
+        .son {
+            /* 如果子元素不设置宽度---默认为父元素的宽度 */
+            /* width: 100px; */
+            height: 100px;
+            background-color: orange;
+
+            /* 在没有给子元素设置宽度时---子元素的padding左右和border左右不会撑大子元素的宽度和高度的 ----原因是浏览器进行了自动内减*/
+            /* padding-left: 30px; */
+            /* padding-right: 30px; */
+            /* border-left: 1px solid #000; */
+            /* border-right: 1px solid #000; */
+
+
+            /* 注意此时设置上下方向的border和padding子元素的宽度和高度还是会撑大 */
+            border-top: 10px solid #000;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <!-- 不会撑大盒子的特殊情况 -->
+    <!-- 针对嵌套的块元素而言---1---如果子盒子没有设置宽度 默认为父元素的宽度 -->
+    <!-- 2---在1的前提下 --- 给子盒子设置左右的padding或者左右的border---此时不会撑大子盒子 -->
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

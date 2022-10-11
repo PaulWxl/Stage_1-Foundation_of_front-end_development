@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+        .red {
+            background-color: #f00;
+            /* display: inline-block; */
+        }
+        .green {
+            background-color: #0f0;
+            /* float: right; */
+        }
+        .blue {
+            background-color: #00f;
+        }
+
+
+        span {
+            /* 设置浮动之后脱标 就可以设置宽高了 而且还是会多个元素在一行上 说是转换为行内块元素有一些小问题
+             */
+            float:left;
+            width: 200px;
+            height: 200px;
+            background-color: #6c99c5;
+            border: 1px solid #000;
+            /* 注意浮动元素本身不能通过text-align:center或者margin:0 auto来水平居中 但是浮动元素内部的内容还是可以水平居中的 */
+            /* 文字还是用text-align:center 实现水平居中 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 浮动的特点下
+4---浮动元素会受到上面元素边界的影响---这就是为什么绿盒子右浮动没有飘到最上面 而是飘到右边水平的地方---
+因为上面的红盒子是块元素 会独占一行 
+5---浮动元素有特殊的显示效果： 
+多个浮动元素可以占一行
+可以设置宽度和高度
+
+
+注意点：
+浮动元素不能通过text-align:center或者margin:0 auto 让浮动元素本身水平居中
+使用浮动的初衷：就是让元素靠到最左边或最右边---如果想让元素水平居中 就和初衷矛盾了---
+但是：不代表浮动元素的内容不能水平居中-->
+
+
+
+<!-- <div class="red"></div>
+<div class="green"></div>
+<div class="blue"></div> -->
+
+<span>span</span>
+<span>span</span>
+<span>span</span>
+
+</body>
+</html>

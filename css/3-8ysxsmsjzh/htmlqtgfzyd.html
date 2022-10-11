@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            width: 200px;
+            height: 200px;
+            background-color: #6c99c5;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML嵌套规范注意点 -->
+    <!-- 元素之间的嵌套写法---块元素 行内元素 行内块元素 -->
+    <!-- 块元素一般作为大容器---可以嵌套页面中很多元素---比如 文本 块元素 行内元素 行内块元素 -->
+    <!-- 特例---p标签中不要嵌套块元素 -->
+
+
+
+    <!-- 如果这样写---浏览器会自动补上p标签---拆分成两个p标签 -->
+    <!-- <p>
+        <div></div>
+    </p> -->
+
+
+    <!-- 特例---a标签作为行内块元素---可以嵌套除了他自身以外的任意元素 -->
+    <!-- 如果这么写---浏览器自动补上了a标签 -->
+
+
+
+    <!-- 一定要记清楚 -->
+    <a href="#">
+        <a href="#">我是一个a标签</a>
+    </a>
+
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            /* display: inline-block; */
+            /* float: left; */
+            /* overflow: hidden; */
+            /* 上面三种方法都可以转换为BFC盒子---清除浮动且解决margin的塌陷 */
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            margin-top: 100px;
+        }
+
+        /* 双伪元素清除法也可以使父元素---清除浮动且解决margin的塌陷 */
+        .clearfix::after,
+        .clearfix::before {
+            content: '';
+            display: table;
+        }
+        .clearfix::after {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="father clearfix">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     /* <!-- 清除标签默认的margin和padding -->
+    <!-- 通配符 margin 0 padding 0 即可 --> */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .box {
+        width: 500px;
+        height: 400px;
+        /* 自动内减 */
+        box-sizing: border-box;
+        /* 注意这几个内边距的设置---只设置了上左右---下方内边距由文字决定 */
+        /* 注意设置这个盒子的padding很关键---这样才能让标题和新闻内容离边框有间隙（即内边距） */
+        padding-top: 41px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: 1px solid #ccc;
+    }
+    .box .title h2 {
+        height: 41px;
+        /* 为了看到当前盒子的范围---设置辅助背景颜色 */
+        /* background-color: pink; */
+        /* 一定要注意border无论是什么方向的---都可能将宽度和高度撑大 */
+        /* 所以需要自动内减 box-sizing:border-box;*/
+        box-sizing: border-box;
+        border-bottom: 1px dotted #ccc;
+        /* 文字大小经过pxcook量取之后---大致是30px */
+        font-size: 30px;
+       }
+
+        /* 浏览器会对文字设置默认的行高---会导致行高减去文字之后 多余的间隙 会进行等分 */
+        /* 需要去除默认行高带来的上下间隙 */
+        /* 可以直接找到body标签---设置line-height为1---1表示和文字大小一致 */
+        /* 因为行高和文字大小一致后---就没有多余的间隙进行上下等分了 */
+        /* 而且body中的line-height是可以被继承的 */
+        body {
+            line-height: 1;
+        }
+        .box ul li a {/*选择器需要精准查找---所以写的详细比较好*/
+            text-decoration: none;
+            font-size: 18px;
+            color: #666;
+        }
+        .box ul li {
+            list-style: none;
+            /* 手动内减---这个height在用pxcook测量的时候 就没有把边框算进去 */
+            height: 50px;
+            /* 单独写的边框宽度 */
+            border-bottom: 1px dashed #ccc;
+            /* 为了使垂直居中---所以line-height设置的也是和height一致 */
+            line-height: 50px;
+            /* 新闻内容没有紧贴li---所以可以对li设置内边距 */
+            /* padding-left: 30px; */
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 布局顺序---外到内---上到下 -->
+    <!-- 每一个盒子的样式---
+        宽度和高度----
+        辅助的背景颜色---
+        盒子模型的部分（border padding margin）---
+        其他样式（color font text系列） -->
+
+    <!-- 注意是按照功能划分盒子---标题和内容---而且li内部还嵌套了a标签---而不是所有都是div -->
+
+    <div class="box">
+        <div class="title">
+            <!-- 因为h2标签是块元素---默认会一行占满---所以不需要设置宽度---只需要设置高度 -->
+            <h2>最新文章/New Articles</h2>
+        </div>
+        <ul>
+            <!-- li标签本身就是块元素---会占满一行---所以不用设置宽度---只需要设置高度 -->
+            <li><a href="#">Ehang工作室牛逼</a></li>
+            <li><a href="#">Ehang工作室牛逼</a></li>
+            <li><a href="#">Ehang工作室牛逼</a></li>
+            <li><a href="#">Ehang工作室牛逼</a></li>
+            <li><a href="#">Ehang工作室牛逼</a></li>
+        </ul>
+        
+    </div>
+</body>
+</html>

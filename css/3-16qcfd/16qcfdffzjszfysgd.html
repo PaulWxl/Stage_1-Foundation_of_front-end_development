@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            /* father若没有设置高度 会由内容撑开---这里就是跟子元素的高度一致---
+            所以如果内容（子元素）变为浮动元素后 脱标 那么父元素的高度就不会被内容撑开 所以高度为0---
+            是看不到父元素的 */
+            width: 400px;
+            /* 父元素设置高度之后 才能看到父元素 */
+            height: 400px;
+            background-color: pink;
+        }
+        .son {
+            /* 内容（子元素）变为浮动元素后 脱标 那么父元素在没有设置高度的情况下高度就不会被内容撑开 所以高度为0---
+            是看不到父元素的  */
+            float: left;
+            width: 100px;
+            height: 400px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 清除浮动的方法
+1---给在标准流中的父元素设置高度
+优点： 简单粗暴 方便
+缺点： 有些布局中不能固定父元素高度。 如： 新闻列表 京东推荐模块
+新闻列表： 每条新闻的长度不一样 如果将新闻列表的长度写死之后 可能就会有的多 有的少---
+所以很多时候是不设置父元素的高度 让他由内容撑开的-->
+
+<div class="father">
+    <div class="son"></div>
+</div>
+</body>
+</html>

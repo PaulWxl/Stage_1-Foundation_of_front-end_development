@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 400px;
+            background-color: pink;
+        }
+        .son {
+            float: left;
+            width: 100px;
+            height: 400px;
+            background-color: blue;
+        }
+        /* 单伪元素清除法 */
+        /* .clearfix::after {
+            content: '.';
+            display: block;
+            clear: both;
+
+            height: 0;
+            visibility: hidden;
+        } */
+        /* 双伪元素清除法 */
+        /* 注意多加了一个.clearfix::before 而且两者在一起设置的是display: table */
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+
+            /* 伪元素默认是行内元素
+            display:table是表格的显示方式---比block还多一些其他的功能  */
+            display: table;
+        }
+        /* 注意还是父元素的最后使用clear:both */
+        .clearfix::after {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- 清除浮动的方法： 双伪元素清除法---和单伪元素清除法类似 只不过多了一个伪元素 
+特点：
+优点： 项目中使用 直接给标签加类即可清除浮动
+
+还可以用于margin的塌陷现象-->
+<div class="father clearfix">
+    <div class="son">
+
+    </div>
+</div>
+</body>
+</html>

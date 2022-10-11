@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            list-style: none;/*去除li元素默认的小圆点效果*/
+        }
+        body {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 继承的应用---在一定程度上减少代码 -->
+    <!-- 常见默认场景---列表想去除li元素的默认的小圆点---可以直接给ul元素设置list-style:none属性---通过li继承ul的属性减少代码 -->
+    <!-- 第二个比较常见的场景---直接给body标签设置统一的font-size 统一不同浏览器默认文字大小 -->
+    <!-- 如果没有改变谷歌浏览器的设置 默认文字的大小是16px 但是换了其他浏览器文字的默认大小可能就不一样了 为了使用户无论使用哪个浏览器 打开文字默认大小一样---直接在style中找到body标签---给body标签设置font-size即可---页面中的其他元素都会继承body的font-size属性 -->
+    <ul>
+        <li>我是一个列表1</li>
+    </ul>
+    <ul>
+        <li>我是一个列表2</li>
+    </ul>
+    <ul>
+        <li>我是一个列表3</li>
+    </ul>
+
+
+</body>
+</html>

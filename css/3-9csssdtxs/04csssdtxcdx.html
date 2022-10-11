@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .orange {
+            color: orange;
+        }/*生效---所以说 只有当选择器优先级相同时 才能去比较层叠性*/
+        p {
+            color: #6c99c5;
+
+        }
+        p {
+            color: blue;
+        }
+        p {
+            color: red;
+        }
+        
+        /* 相同标签 不同属性 层叠叠加 */
+        /* 相同标签 相同属性 只会显示最后一个的效果 */
+    </style>
+</head>
+<body>
+    <!-- css层叠性 -->
+    <!-- 给同一个标签设置不同的属性---层叠叠加---会共同作用在标签上 -->
+    <!-- 给同一个标签设置相同的属性---层叠覆盖---最终写在最后的样式会升生效 -->
+    <!-- 只有当选择器优先级相同时 才能去比较层叠性 -->
+    <!-- <p>我是一个文字</p> -->
+
+
+    <!-- 当属性相同时 只有当选择器优先级相同时 才能通过层叠性判断结果 -->
+    <p class="orange">我是一个文字</p>
+</body>
+</html>
